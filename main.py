@@ -39,6 +39,8 @@ class App(tk.Tk):
             self.labelframe_tree.grid(row=0, column=0, sticky="nwes", padx=10, pady=10)
             self.treeview_tree = ttk.Treeview(self.labelframe_tree)
             self.treeview_tree.grid(row=0, column=0, sticky="nwes", padx=5, pady=5)
+            self.frame_tree.grid_rowconfigure(0, weight=1)
+            self.labelframe_tree.grid_rowconfigure(0, weight=1)
             init_tree("", project_path)
             log("Opened project '"+config_content['project_name']+"' ("+project_path+")")
         def newProject():
